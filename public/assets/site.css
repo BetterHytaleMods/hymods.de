@@ -315,6 +315,9 @@ kbd {
 .gallery .name { font-weight: 700; font-size: .92rem; line-height: 1.3; margin-top: 2px; text-wrap: balance; }
 .gallery .meta { color: var(--muted); font-size: .82rem; line-height: 1.4; text-wrap: balance; }
 .gallery .meta.bench { color: #8592a4; font-size: .76rem; }
+@media (min-width: 480px) {
+  .nw { white-space: nowrap; }
+}
 /* one row per kind: zoom, night vision, then the top piece in the middle */
 @media (min-width: 700px) {
   .gallery.goggles { grid-template-columns: repeat(4, minmax(0, 1fr)); }
