@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>FlexiisGoggles · Hymods</title>
+  <meta name="description" content="Craftable goggles for Hytale servers: hold R to zoom like OptiFine, night vision lights up caves for you alone.">
+  <link rel="canonical" href="https://hymods.de/flexiisgoggles/">
+  <meta name="theme-color" content="#10131a">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hymods">
+  <meta property="og:title" content="FlexiisGoggles">
+  <meta property="og:description" content="Craftable goggles: hold R to zoom like OptiFine, night vision lights up caves for you alone.">
+  <meta property="og:url" content="https://hymods.de/flexiisgoggles/">
+  <meta property="og:image" content="https://hymods.de/flexiisgoggles/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The UltraGoggles of FlexiisGoggles">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>HYMODS</a>
+      <a class="btn btn-primary" href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/releases/latest">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11 3h2v9.17l3.59-3.58L18 10l-6 6-6-6 1.41-1.41L11 12.17V3zM5 19h14v2H5z"/></svg>
+        Download
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="title">
+      <div>
+        <div class="title-row">
+          <picture class="mod-icon">
+            <source type="image/webp" srcset="/flexiisgoggles/img/logo.webp">
+            <img src="/flexiisgoggles/img/logo.png" width="400" height="400" alt="FlexiisGoggles logo">
+          </picture>
+          <h1 id="title">FlexiisGoggles</h1>
+        </div>
+        <p class="lede">Craftable goggles: hold <kbd>R</kbd> to zoom like OptiFine, night vision lights up caves for you alone.</p>
+        <ul class="badges" aria-label="About this mod">
+          <li class="version">0.1.0</li>
+          <li>Hytale 0.7</li>
+          <li>Server-side</li>
+          <li>MIT</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/releases/latest">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11 3h2v9.17l3.59-3.58L18 10l-6 6-6-6 1.41-1.41L11 12.17V3zM5 19h14v2H5z"/></svg>
+            Download
+          </a>
+          <a class="btn" href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles">
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            Source
+          </a>
+          <!-- CurseForge, once the project page exists:
+          <a class="btn" href="https://www.curseforge.com/hytale/mods/flexiisgoggles">CurseForge</a>
+          -->
+        </div>
+      </div>
+      <figure class="hero-art">
+        <picture>
+          <source type="image/webp" srcset="/flexiisgoggles/img/hero-ultragoggles.webp">
+          <img src="/flexiisgoggles/img/hero-ultragoggles.png" width="1120" height="974" fetchpriority="high" alt="The UltraGoggles: a gold frame with a glowing cyan visor, a monocle and two tubes on top">
+        </picture>
+      </figure>
+    </section>
+
+    <nav class="toc wrap" aria-label="On this page">
+      <ul>
+        <li><a href="#goggles">Goggles</a></li>
+        <li><a href="#bench">Optician's Bench</a></li>
+        <li><a href="#crafting">Crafting</a></li>
+        <li><a href="#helms">Helms</a></li>
+        <li><a href="#ores">Quartz &amp; Lumenite</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#commands">Commands</a></li>
+        <li><a href="#server">Server owners</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="zoom" aria-labelledby="zoom-title">
+      <div class="wrap feature">
+        <div class="prose">
+          <h2 class="gem cyan" id="zoom-title">Zoom Goggles I–IV</h2>
+          <p>Hold <kbd>R</kbd> to zoom in, from 1.5x up to 8x. FlexiisGoggles uses Hytale's own client zoom (the one the spyglass uses): the view narrows smoothly, the item in your hand goes away, the mouse slows down and the camera glides after it. Let go to zoom back out.</p>
+          <p class="sub"><kbd>R</kbd> is Hytale's “Use Ability 3”; bind that action to any key under Settings → Controls.</p>
+        </div>
+        <div class="media">
+          <!-- Screenshot slot "zoom-in-action": put the screenshot in place of this <picture>
+               (see README) and add class "shot" to the figure. -->
+          <figure class="stage" data-slot="zoom-in-action">
+            <picture>
+              <source type="image/webp" srcset="/flexiisgoggles/img/worn-zoom-4.webp 480w, /flexiisgoggles/img/worn-zoom-4-960.webp 960w" sizes="(min-width: 900px) 440px, 90vw">
+              <img src="/flexiisgoggles/img/worn-zoom-4-960.png" width="960" height="833" loading="lazy" decoding="async" alt="Zoom Goggles IV worn on a head">
+            </picture>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="night-vision" aria-labelledby="nv-title">
+      <div class="wrap feature flip">
+        <div class="prose">
+          <h2 class="gem cyan" id="nv-title">Night Vision Goggles I–IV</h2>
+          <p>Caves and nights light up – for you alone. Torches, lava and the sun still shine brighter, so the world keeps its depth. Nobody else sees it, and mobs and plants keep using the real light.</p>
+          <p class="sub"><code>/nightvision</code> (or <code>/nv</code>) switches it on and off.</p>
+        </div>
+        <div class="media">
+          <!-- Screenshot slot "night-vision-before-after": two screenshots of the same spot,
+               night vision off and on, in place of the two <picture> elements. -->
+          <div class="stage" data-slot="night-vision-before-after">
+            <div class="pair">
+              <figure>
+                <picture>
+                  <source type="image/webp" srcset="/flexiisgoggles/img/cave-dark.webp">
+                  <img src="/flexiisgoggles/img/cave-dark.png" width="780" height="772" loading="lazy" decoding="async" alt="A cave corner with quartz ore in the dark">
+                </picture>
+                <figcaption>Off</figcaption>
+              </figure>
+              <figure class="on">
+                <picture>
+                  <source type="image/webp" srcset="/flexiisgoggles/img/cave-lit.webp">
+                  <img src="/flexiisgoggles/img/cave-lit.png" width="780" height="772" loading="lazy" decoding="async" alt="The same cave corner lit up by night vision">
+                </picture>
+                <figcaption>On</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ultragoggles" aria-labelledby="ultra-title">
+      <div class="wrap feature">
+        <div class="prose">
+          <h2 class="gem" id="ultra-title">UltraGoggles</h2>
+          <p>Zoom up to 16x and the strongest night vision in one late-game pair. They need lumenite – a rare ore that looks like plain stone to everyone, unless you look through Night Vision Goggles IV.</p>
+        </div>
+        <div class="media">
+          <!-- Screenshot slot "goggles-on-player": a player wearing goggles. -->
+          <figure class="stage" data-slot="goggles-on-player">
+            <picture>
+              <source type="image/webp" srcset="/flexiisgoggles/img/worn-ultra.webp 480w, /flexiisgoggles/img/worn-ultra-960.webp 960w" sizes="(min-width: 900px) 440px, 90vw">
+              <img src="/flexiisgoggles/img/worn-ultra-960.png" width="960" height="833" loading="lazy" decoding="async" alt="UltraGoggles worn on a head">
+            </picture>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="goggles" aria-labelledby="goggles-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="gem" id="goggles-title">Goggles</h2>
+        </div>
+        <ul class="gallery goggles">
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/worn-zoom-1.webp"><img src="/flexiisgoggles/img/worn-zoom-1.png" width="480" height="417" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-common">Zoom Goggles I</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/worn-zoom-2.webp"><img src="/flexiisgoggles/img/worn-zoom-2.png" width="480" height="417" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-uncommon">Zoom Goggles II</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/worn-zoom-3.webp"><img src="/flexiisgoggles/img/worn-zoom-3.png" width="480" height="417" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-rare">Zoom Goggles III</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/worn-zoom-4.webp"><img src="/flexiisgoggles/img/worn-zoom-4.png" width="480" height="417" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-epic">Zoom Goggles IV</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/worn-nightvision-1.webp"><img src="/flexiisgoggles/img/worn-nightvision-1.png" width="480" height="417" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-common">Night Vision Goggles I</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/worn-nightvision-2.webp"><img src="/flexiisgoggles/img/worn-nightvision-2.png" width="480" height="417" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-uncommon">Night Vision Goggles II</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/worn-nightvision-3.webp"><img src="/flexiisgoggles/img/worn-nightvision-3.png" width="480" height="417" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-rare">Night Vision Goggles III</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/worn-nightvision-4.webp"><img src="/flexiisgoggles/img/worn-nightvision-4.png" width="480" height="417" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-epic">Night Vision Goggles IV</span>
+          </li>
+          <li class="panel ultra">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/worn-ultra.webp"><img src="/flexiisgoggles/img/worn-ultra.png" width="480" height="417" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-legendary">UltraGoggles</span>
+          </li>
+        </ul>
+
+        <div class="table-wrap">
+          <table class="stack">
+            <caption class="visually-hidden">Goggles, the bench tier they need and how strong they are</caption>
+            <thead>
+              <tr><th scope="col">Goggles</th><th scope="col" class="num">Bench tier</th><th scope="col" class="num">Zoom</th><th scope="col" class="num">Night vision</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="wide"><span class="item"><span class="slot q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-zoom-1.webp"><img src="/flexiisgoggles/img/icon-goggles-zoom-1.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-common">Zoom Goggles I</span></span></th>
+                <td class="num" data-label="Tier">1</td><td class="num" data-label="Zoom">1.5x</td><td class="num dim" data-label="Night vision">–</td>
+              </tr>
+              <tr>
+                <th scope="row" class="wide"><span class="item"><span class="slot q-uncommon"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-zoom-2.webp"><img src="/flexiisgoggles/img/icon-goggles-zoom-2.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-uncommon">Zoom Goggles II</span></span></th>
+                <td class="num" data-label="Tier">2</td><td class="num" data-label="Zoom">3x</td><td class="num dim" data-label="Night vision">–</td>
+              </tr>
+              <tr>
+                <th scope="row" class="wide"><span class="item"><span class="slot q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-zoom-3.webp"><img src="/flexiisgoggles/img/icon-goggles-zoom-3.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-rare">Zoom Goggles III</span></span></th>
+                <td class="num" data-label="Tier">3</td><td class="num" data-label="Zoom">5x</td><td class="num dim" data-label="Night vision">–</td>
+              </tr>
+              <tr>
+                <th scope="row" class="wide"><span class="item"><span class="slot q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-zoom-4.webp"><img src="/flexiisgoggles/img/icon-goggles-zoom-4.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-epic">Zoom Goggles IV</span></span></th>
+                <td class="num" data-label="Tier">4</td><td class="num" data-label="Zoom">8x</td><td class="num dim" data-label="Night vision">–</td>
+              </tr>
+              <tr>
+                <th scope="row" class="wide"><span class="item"><span class="slot q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-nightvision-1.webp"><img src="/flexiisgoggles/img/icon-goggles-nightvision-1.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-common">Night Vision Goggles I</span></span></th>
+                <td class="num" data-label="Tier">1</td><td class="num dim" data-label="Zoom">–</td><td class="num" data-label="Night vision">1</td>
+              </tr>
+              <tr>
+                <th scope="row" class="wide"><span class="item"><span class="slot q-uncommon"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-nightvision-2.webp"><img src="/flexiisgoggles/img/icon-goggles-nightvision-2.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-uncommon">Night Vision Goggles II</span></span></th>
+                <td class="num" data-label="Tier">2</td><td class="num dim" data-label="Zoom">–</td><td class="num" data-label="Night vision">2</td>
+              </tr>
+              <tr>
+                <th scope="row" class="wide"><span class="item"><span class="slot q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-nightvision-3.webp"><img src="/flexiisgoggles/img/icon-goggles-nightvision-3.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-rare">Night Vision Goggles III</span></span></th>
+                <td class="num" data-label="Tier">3</td><td class="num dim" data-label="Zoom">–</td><td class="num" data-label="Night vision">3</td>
+              </tr>
+              <tr>
+                <th scope="row" class="wide"><span class="item"><span class="slot q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-nightvision-4.webp"><img src="/flexiisgoggles/img/icon-goggles-nightvision-4.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-epic">Night Vision Goggles IV</span></span></th>
+                <td class="num" data-label="Tier">4</td><td class="num dim" data-label="Zoom">–</td><td class="num" data-label="Night vision">5</td>
+              </tr>
+              <tr>
+                <th scope="row" class="wide"><span class="item"><span class="slot q-legendary"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-ultra.webp"><img src="/flexiisgoggles/img/icon-goggles-ultra.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-legendary">UltraGoggles</span></span></th>
+                <td class="num" data-label="Tier">5</td><td class="num" data-label="Zoom">16x (starts at 12x)</td><td class="num" data-label="Night vision">6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bench" aria-labelledby="bench-title">
+      <div class="wrap">
+        <div class="feature flip">
+          <div class="prose">
+            <h2 class="gem" id="bench-title">Optician's Bench</h2>
+            <p>A cheap bench that grows through five tiers – from a trestle table with a grindstone to a gold-trimmed desk with a floating lumenite crystal. Every tier unlocks stronger goggles; from tier 3 the bench lights up the room, and its grindstone turns while crafting. Glass and lenses are made there too.</p>
+          </div>
+          <div class="media">
+            <!-- Screenshot slot "bench-in-world": the bench placed in a world. -->
+            <figure class="stage" data-slot="bench-in-world">
+              <picture>
+                <source type="image/webp" srcset="/flexiisgoggles/img/bench-tier5-large.webp">
+                <img src="/flexiisgoggles/img/bench-tier5-large.png" width="1120" height="1275" loading="lazy" decoding="async" alt="Optician's Bench at tier 5: a black and gold desk with a telescope, a grindstone and a floating lumenite crystal">
+              </picture>
+            </figure>
+          </div>
+        </div>
+
+        <ol class="tiers" aria-label="Bench tiers">
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/bench-tier1.webp"><img src="/flexiisgoggles/img/bench-tier1.png" width="492" height="561" loading="lazy" decoding="async" alt="Optician's Bench, tier 1"></picture>
+            <span class="tier-num">Tier 1</span>
+            <dl>
+              <dt>Workbench</dt>
+              <dd><ul class="ings"><li class="plain"><b>4</b> Copper Ingot</li><li class="plain"><b>10</b> Any Tree Log</li><li class="plain"><b>5</b> Any Stone</li></ul></dd>
+              <dt>Unlocks</dt>
+              <dd>Glass, Glass Lens, Zoom Goggles I, Night Vision Goggles I</dd>
+            </dl>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/bench-tier2.webp"><img src="/flexiisgoggles/img/bench-tier2.png" width="492" height="561" loading="lazy" decoding="async" alt="Optician's Bench, tier 2"></picture>
+            <span class="tier-num">Tier 2</span>
+            <dl>
+              <dt>Upgrade</dt>
+              <dd><ul class="ings"><li class="plain"><b>15</b> Iron Ingot</li><li class="plain"><b>20</b> Quartz</li><li class="plain"><b>5</b> Light Leather</li></ul></dd>
+              <dt>Unlocks</dt>
+              <dd>Polished Lens, Zoom Goggles II, Night Vision Goggles II</dd>
+            </dl>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/bench-tier3.webp"><img src="/flexiisgoggles/img/bench-tier3.png" width="492" height="561" loading="lazy" decoding="async" alt="Optician's Bench, tier 3"></picture>
+            <span class="tier-num">Tier 3</span>
+            <dl>
+              <dt>Upgrade</dt>
+              <dd><ul class="ings"><li class="plain"><b>15</b> Thorium Ingot</li><li class="plain"><b>5</b> Gold Ingot</li><li class="plain"><b>15</b> Any Crystal Shard</li><li class="plain"><b>30</b> Quartz</li></ul></dd>
+              <dt>Unlocks</dt>
+              <dd>Crystal Lens, Zoom Goggles III, Night Vision Goggles III</dd>
+            </dl>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/bench-tier4.webp"><img src="/flexiisgoggles/img/bench-tier4.png" width="492" height="561" loading="lazy" decoding="async" alt="Optician's Bench, tier 4"></picture>
+            <span class="tier-num">Tier 4</span>
+            <dl>
+              <dt>Upgrade</dt>
+              <dd><ul class="ings"><li class="plain"><b>15</b> Adamantite Ingot</li><li class="plain"><b>5</b> Void Crystal Shards</li><li class="plain"><b>2</b> Voidheart</li><li class="plain"><b>45</b> Quartz</li></ul></dd>
+              <dt>Unlocks</dt>
+              <dd>Void Lens, Zoom Goggles IV, Night Vision Goggles IV</dd>
+            </dl>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/bench-tier5.webp"><img src="/flexiisgoggles/img/bench-tier5.png" width="492" height="561" loading="lazy" decoding="async" alt="Optician's Bench, tier 5"></picture>
+            <span class="tier-num">Tier 5</span>
+            <dl>
+              <dt>Upgrade</dt>
+              <dd><ul class="ings"><li class="plain"><b>25</b> Adamantite Ingot</li><li class="plain"><b>10</b> Void Crystal Shards</li><li class="plain"><b>3</b> Voidheart</li><li class="plain"><b>60</b> Quartz</li></ul></dd>
+              <dt>Unlocks</dt>
+              <dd>UltraGoggles</dd>
+            </dl>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="crafting" aria-labelledby="crafting-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="gem" id="crafting-title">Crafting</h2>
+        </div>
+
+        <div class="panel card steps">
+          <h3>Getting started</h3>
+          <ol>
+            <li>Craft the <strong>Optician's Bench</strong> at the Workbench: 4 Copper Ingot, 10 Any Tree Log, 5 Any Stone.</li>
+            <li>Mine <strong>Quartz Ore</strong> in the stone of zones 1–3; quartz goes into nearly everything. At the bench, sand and quartz make glass, glass and more quartz make lenses, lenses make goggles.</li>
+            <li>Upgrade the bench for stronger goggles: iron, quartz and light leather for tier 2, then thorium, gold and crystal shards, then adamantite, void crystals and voidhearts – and more quartz every time.</li>
+            <li>Night Vision Goggles IV show <strong>lumenite</strong>, which looks like plain stone to everyone else. Three of it go into the UltraGoggles at bench tier 5.</li>
+            <li>At the Armorer's Workbench, goggles and a vanilla helmet of their tier make a <a href="#helms">helm</a>.</li>
+          </ol>
+        </div>
+
+        <div class="table-wrap recipes recipes-materials">
+          <table class="stack">
+            <caption class="visually-hidden">Glass and lenses at the Optician's Bench</caption>
+            <thead>
+              <tr><th scope="col">Material</th><th scope="col" class="num">Tier</th><th scope="col">Ingredients</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-glass.webp"><img src="/flexiisgoggles/img/item-glass.png" width="192" height="146" loading="lazy" decoding="async" alt=""></picture></span><span class="t-common">Glass <span class="dim">×2</span></span></span></th>
+                <td class="num" data-label="Tier">1</td>
+                <td class="wide"><ul class="ings"><li class="plain"><b>2</b> Any Sand</li><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-quartz.webp"><img src="/flexiisgoggles/img/item-quartz.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Quartz</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-glass.webp"><img src="/flexiisgoggles/img/item-lens-glass.png" width="181" height="192" loading="lazy" decoding="async" alt=""></picture></span><span class="t-common">Glass Lens</span></span></th>
+                <td class="num" data-label="Tier">1</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-glass.webp"><img src="/flexiisgoggles/img/item-glass.png" width="192" height="146" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Glass</li><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-quartz.webp"><img src="/flexiisgoggles/img/item-quartz.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Quartz</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-uncommon"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-polished.webp"><img src="/flexiisgoggles/img/item-lens-polished.png" width="169" height="192" loading="lazy" decoding="async" alt=""></picture></span><span class="t-uncommon">Polished Lens</span></span></th>
+                <td class="num" data-label="Tier">2</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-glass.webp"><img src="/flexiisgoggles/img/item-glass.png" width="192" height="146" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Glass</li><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-quartz.webp"><img src="/flexiisgoggles/img/item-quartz.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>4</b> Quartz</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-crystal.webp"><img src="/flexiisgoggles/img/item-lens-crystal.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><span class="t-rare">Crystal Lens</span></span></th>
+                <td class="num" data-label="Tier">3</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-glass.webp"><img src="/flexiisgoggles/img/item-glass.png" width="192" height="146" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Glass</li><li class="plain"><b>4</b> Any Crystal Shard</li><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-quartz.webp"><img src="/flexiisgoggles/img/item-quartz.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>6</b> Quartz</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-void.webp"><img src="/flexiisgoggles/img/item-lens-void.png" width="192" height="174" loading="lazy" decoding="async" alt=""></picture></span><span class="t-epic">Void Lens</span></span></th>
+                <td class="num" data-label="Tier">4</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-glass.webp"><img src="/flexiisgoggles/img/item-glass.png" width="192" height="146" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Glass</li><li class="plain"><b>2</b> Void Crystal Shards</li><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-quartz.webp"><img src="/flexiisgoggles/img/item-quartz.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>8</b> Quartz</li></ul></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrap recipes recipes-goggles">
+          <table class="stack">
+            <caption class="visually-hidden">Goggles at the Optician's Bench</caption>
+            <thead>
+              <tr><th scope="col">Goggles</th><th scope="col" class="num">Tier</th><th scope="col">Ingredients</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-zoom-1.webp"><img src="/flexiisgoggles/img/icon-goggles-zoom-1.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-common">Zoom Goggles I</span></span></th>
+                <td class="num" data-label="Tier">1</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-glass.webp"><img src="/flexiisgoggles/img/item-lens-glass.png" width="181" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Glass Lens</li><li class="plain"><b>2</b> Copper Ingot</li><li class="plain"><b>2</b> Light Leather</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-uncommon"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-zoom-2.webp"><img src="/flexiisgoggles/img/icon-goggles-zoom-2.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-uncommon">Zoom Goggles II</span></span></th>
+                <td class="num" data-label="Tier">2</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-uncommon"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-polished.webp"><img src="/flexiisgoggles/img/item-lens-polished.png" width="169" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Polished Lens</li><li class="plain"><b>3</b> Iron Ingot</li><li class="plain"><b>2</b> Light Leather</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-zoom-3.webp"><img src="/flexiisgoggles/img/icon-goggles-zoom-3.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-rare">Zoom Goggles III</span></span></th>
+                <td class="num" data-label="Tier">3</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-crystal.webp"><img src="/flexiisgoggles/img/item-lens-crystal.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Crystal Lens</li><li class="plain"><b>3</b> Thorium Ingot</li><li class="plain"><b>2</b> Medium Leather</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-zoom-4.webp"><img src="/flexiisgoggles/img/icon-goggles-zoom-4.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-epic">Zoom Goggles IV</span></span></th>
+                <td class="num" data-label="Tier">4</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-void.webp"><img src="/flexiisgoggles/img/item-lens-void.png" width="192" height="174" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Void Lens</li><li class="plain"><b>3</b> Adamantite Ingot</li><li class="plain"><b>2</b> Heavy Leather</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-nightvision-1.webp"><img src="/flexiisgoggles/img/icon-goggles-nightvision-1.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-common">Night Vision Goggles I</span></span></th>
+                <td class="num" data-label="Tier">1</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-glass.webp"><img src="/flexiisgoggles/img/item-lens-glass.png" width="181" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Glass Lens</li><li class="plain"><b>2</b> Copper Ingot</li><li class="plain"><b>2</b> Light Leather</li><li class="plain"><b>3</b> Green Glowing Mushroom</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-uncommon"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-nightvision-2.webp"><img src="/flexiisgoggles/img/icon-goggles-nightvision-2.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-uncommon">Night Vision Goggles II</span></span></th>
+                <td class="num" data-label="Tier">2</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-uncommon"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-polished.webp"><img src="/flexiisgoggles/img/item-lens-polished.png" width="169" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Polished Lens</li><li class="plain"><b>3</b> Iron Ingot</li><li class="plain"><b>2</b> Light Leather</li><li class="plain"><b>3</b> Essence of Fire</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-nightvision-3.webp"><img src="/flexiisgoggles/img/icon-goggles-nightvision-3.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-rare">Night Vision Goggles III</span></span></th>
+                <td class="num" data-label="Tier">3</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-crystal.webp"><img src="/flexiisgoggles/img/item-lens-crystal.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Crystal Lens</li><li class="plain"><b>3</b> Thorium Ingot</li><li class="plain"><b>2</b> Medium Leather</li><li class="plain"><b>4</b> Yellow Crystal Shards</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-nightvision-4.webp"><img src="/flexiisgoggles/img/icon-goggles-nightvision-4.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-epic">Night Vision Goggles IV</span></span></th>
+                <td class="num" data-label="Tier">4</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-void.webp"><img src="/flexiisgoggles/img/item-lens-void.png" width="192" height="174" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Void Lens</li><li class="plain"><b>3</b> Adamantite Ingot</li><li class="plain"><b>2</b> Heavy Leather</li><li class="plain"><b>1</b> Voidheart</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-legendary"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-ultra.webp"><img src="/flexiisgoggles/img/icon-goggles-ultra.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-legendary">UltraGoggles</span></span></th>
+                <td class="num" data-label="Tier">5</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-zoom-4.webp"><img src="/flexiisgoggles/img/icon-goggles-zoom-4.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><b>1</b> Zoom Goggles IV</li><li><span class="slot small q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-nightvision-4.webp"><img src="/flexiisgoggles/img/icon-goggles-nightvision-4.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><b>1</b> Night Vision Goggles IV</li><li class="plain"><b>1</b> Gobliterator Core</li><li class="plain"><b>1</b> Diamond</li><li><span class="slot small q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lumenite.webp"><img src="/flexiisgoggles/img/item-lumenite.png" width="192" height="184" loading="lazy" decoding="async" alt=""></picture></span><b>3</b> Lumenite</li><li class="plain"><b>10</b> Adamantite Ingot</li><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-quartz.webp"><img src="/flexiisgoggles/img/item-quartz.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>20</b> Quartz</li></ul></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="helms" aria-labelledby="helms-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="gem" id="helms-title">Helms</h2>
+        </div>
+        <div class="prose helms-intro">
+          <p>Mount your goggles on a helmet at the Armorer's Workbench and wear both: Scout Helms (zoom), Nightwatch Helms (night vision) and the Overseer Helm. Helms count like the goggles mounted on them and keep the helmet's armor values: copper for I, iron for II, thorium or cobalt for III, adamantite for IV and the UltraGoggles.</p>
+        </div>
+        <ul class="gallery helms">
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-scout-copper.webp"><img src="/flexiisgoggles/img/helm-scout-copper.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-common">Copper Scout Helm</span>
+            <span class="meta">Zoom Goggles I + Copper Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 1</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-scout-iron.webp"><img src="/flexiisgoggles/img/helm-scout-iron.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-uncommon">Iron Scout Helm</span>
+            <span class="meta">Zoom Goggles II + Iron Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 1</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-scout-thorium.webp"><img src="/flexiisgoggles/img/helm-scout-thorium.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-rare">Thorium Scout Helm</span>
+            <span class="meta">Zoom Goggles III + Thorium Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 2</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-scout-cobalt.webp"><img src="/flexiisgoggles/img/helm-scout-cobalt.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-rare">Cobalt Scout Helm</span>
+            <span class="meta">Zoom Goggles III + Cobalt Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 2</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-scout-adamantite.webp"><img src="/flexiisgoggles/img/helm-scout-adamantite.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-epic">Adamantite Scout Helm</span>
+            <span class="meta">Zoom Goggles IV + Adamantite Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 3</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-nightwatch-copper.webp"><img src="/flexiisgoggles/img/helm-nightwatch-copper.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-common">Copper Nightwatch Helm</span>
+            <span class="meta">Night Vision Goggles I + Copper Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 1</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-nightwatch-iron.webp"><img src="/flexiisgoggles/img/helm-nightwatch-iron.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-uncommon">Iron Nightwatch Helm</span>
+            <span class="meta">Night Vision Goggles II + Iron Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 1</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-nightwatch-thorium.webp"><img src="/flexiisgoggles/img/helm-nightwatch-thorium.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-rare">Thorium Nightwatch Helm</span>
+            <span class="meta">Night Vision Goggles III + Thorium Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 2</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-nightwatch-cobalt.webp"><img src="/flexiisgoggles/img/helm-nightwatch-cobalt.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-rare">Cobalt Nightwatch Helm</span>
+            <span class="meta">Night Vision Goggles III + Cobalt Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 2</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-nightwatch-adamantite.webp"><img src="/flexiisgoggles/img/helm-nightwatch-adamantite.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-epic">Adamantite Nightwatch Helm</span>
+            <span class="meta">Night Vision Goggles IV + Adamantite Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 3</span>
+          </li>
+          <li class="panel overseer">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/helm-overseer.webp"><img src="/flexiisgoggles/img/helm-overseer.png" width="328" height="393" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-legendary">Overseer Helm</span>
+            <span class="meta">UltraGoggles + Adamantite Helm</span>
+            <span class="meta bench">Armorer's Workbench, tier 3</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="ores" aria-labelledby="ores-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="gem cyan" id="ores-title">Quartz &amp; Lumenite</h2>
+        </div>
+        <div class="cols">
+          <article class="panel card">
+            <!-- Screenshot slot "quartz-ore-in-cave": quartz ore in a cave wall. -->
+            <figure class="stage" data-slot="quartz-ore-in-cave">
+              <picture>
+                <source type="image/webp" srcset="/flexiisgoggles/img/ore-quartz.webp">
+                <img src="/flexiisgoggles/img/ore-quartz.png" width="460" height="513" loading="lazy" decoding="async" alt="Quartz Ore: stone with white and pink crystals growing out of it">
+              </picture>
+            </figure>
+            <h3>Quartz Ore</h3>
+            <p>A new crystal ore in the stone of zones 1–3. Quartz goes into nearly everything.</p>
+            <ul class="facts">
+              <li>Zones 1–3</li>
+              <li>Cave stone</li>
+              <li>y 30–105</li>
+            </ul>
+          </article>
+          <article class="panel card">
+            <!-- Screenshot slot "lumenite-revealed": the same lumenite ore with night vision off and on. -->
+            <div class="stage" data-slot="lumenite-revealed">
+              <div class="pair">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="/flexiisgoggles/img/ore-lumenite-hidden.webp">
+                    <img src="/flexiisgoggles/img/ore-lumenite-hidden.png" width="460" height="513" loading="lazy" decoding="async" alt="Lumenite Ore as everyone sees it: plain stone">
+                  </picture>
+                  <figcaption>Everyone else</figcaption>
+                </figure>
+                <figure class="on">
+                  <picture>
+                    <source type="image/webp" srcset="/flexiisgoggles/img/ore-lumenite-revealed.webp">
+                    <img src="/flexiisgoggles/img/ore-lumenite-revealed.png" width="460" height="513" loading="lazy" decoding="async" alt="Lumenite Ore through Night Vision Goggles IV: glowing cyan and violet crystals">
+                  </picture>
+                  <figcaption>Night Vision IV</figcaption>
+                </figure>
+              </div>
+            </div>
+            <h3>Lumenite Ore</h3>
+            <p>A rare crystal deep in the stone that looks like plain stone to everyone. Only Night Vision Goggles IV and UltraGoggles (also mounted on a helm) show it, while their night vision is on.</p>
+            <ul class="facts">
+              <li>Rare</li>
+              <li>Zones 1–3</li>
+              <li>y 20–75</li>
+              <li>3 per UltraGoggles</li>
+            </ul>
+          </article>
+        </div>
+        <p class="sub ores-note">Both ores only appear in newly generated chunks.</p>
+      </div>
+    </section>
+
+    <section class="section" id="settings" aria-labelledby="settings-title">
+      <div class="wrap feature">
+        <div class="prose">
+          <h2 class="gem cyan" id="settings-title">Settings page</h2>
+          <p><code>/goggles</code> opens a settings page: zoom strength and night vision brightness up to what your goggles allow, how much the camera glides, night vision on or off. Saved per player.</p>
+        </div>
+        <div class="media">
+          <!-- Screenshot slot "settings-page": the /goggles page in the game. Replace the
+               sketch (div.mock) with the screenshot. -->
+          <div class="stage" data-slot="settings-page">
+            <div class="mock" role="img" aria-label="Sketch of the settings page: zoom strength 12x, glide 0.5, night vision on, brightness 6">
+              <div class="mock-title">FlexiisGoggles</div>
+              <div class="mock-body">
+                <div class="mock-sub">Zoom</div>
+                <div class="mock-row"><span>Strength</span><span class="bar"><i class="w-73"></i></span><span>12x</span></div>
+                <div class="mock-row"><span>Glide</span><span class="bar"><i class="w-28"></i></span><span>0.5</span></div>
+                <div class="mock-sub">Night Vision</div>
+                <div><span class="check">On</span></div>
+                <div class="mock-row"><span>Brightness</span><span class="bar"><i class="w-100"></i></span><span>6</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="commands" aria-labelledby="commands-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="gem" id="commands-title">Commands</h2>
+        </div>
+        <ul class="console">
+          <li><code>/goggles</code><span>Settings page <span class="who">· every player wearing goggles</span></span></li>
+          <li><span><code>/nightvision</code>, <code>/nv</code></span><span>Night vision on or off <span class="who">· every player wearing night vision goggles</span></span></li>
+          <li><code>/goggles status</code><span>Settings and state <span class="who">· operators and the console</span></span></li>
+          <li><code>/goggles reload</code><span>Read <code>config.json</code> again <span class="who">· operators and the console</span></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="server" aria-labelledby="server-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="gem" id="server-title">For server owners</h2>
+        </div>
+        <div class="cols">
+          <div class="panel card">
+            <h3>Install</h3>
+            <ol>
+              <li>Put <a href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/releases/latest"><code>FlexiisGoggles-0.1.0.jar</code></a> into the server's <code>mods/</code> folder.</li>
+              <li>Restart the server.</li>
+            </ol>
+          </div>
+          <div class="panel card">
+            <h3>Compatibility</h3>
+            <dl class="kv">
+              <dt>Hytale</dt><dd><code>&gt;=0.7.0 &lt;0.8.0</code>, tested with 0.7.2</dd>
+              <dt>Players</dt><dd>No client mod, the normal Hytale client</dd>
+              <dt>License</dt><dd><a href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/blob/main/LICENSE">MIT</a></dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="config">
+          <h3>Settings</h3>
+          <p><code>mods/de.hymods_FlexiisGoggles/config.json</code>, created on the first start. <code>/goggles reload</code> applies changes without a restart.</p>
+          <div class="table-wrap">
+            <table class="stack">
+              <caption class="visually-hidden">Settings in config.json</caption>
+              <thead>
+                <tr><th scope="col">Setting</th><th scope="col">Meaning</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row" class="wide"><code>requireGoggles</code></th><td class="wide"><code>true</code>: zoom and night vision only while wearing goggles. <code>false</code>: everyone gets both, up to 16x and brightness 6</td></tr>
+                <tr><th scope="row" class="wide"><code>zoom.enabled</code>, <code>nightVision.enabled</code></th><td class="wide">Switch a feature off for everyone</td></tr>
+                <tr><th scope="row" class="wide"><code>goggles.&lt;name&gt;.zoom</code>, <code>goggles.&lt;name&gt;.nightVision</code></th><td class="wide">How strong each pair of goggles is on this server; can only be lowered</td></tr>
+                <tr><th scope="row" class="wide"><code>zoom.magnification</code>, <code>nightVision.level</code></th><td class="wide">What players get without goggles (<code>requireGoggles: false</code>) until they pick their own</td></tr>
+                <tr><th scope="row" class="wide"><code>zoom.sensitivity</code></th><td class="wide">Mouse sensitivity at 4x, as a share of the normal one; other strengths scale it</td></tr>
+                <tr><th scope="row" class="wide"><code>zoom.inLerp</code>, <code>zoom.outLerp</code></th><td class="wide">How fast the view zooms in and out (0.01 slow to 1 instant)</td></tr>
+                <tr><th scope="row" class="wide"><code>zoom.glide</code></th><td class="wide">Default glide while zoomed, 0 (off) to 1.8</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="sub">Each player's own choices are in <code>players.json</code> next to it. Switching night vision on or changing its brightness makes that player's client rebuild the world it has loaded, which can show as a short flicker.</p>
+        </div>
+
+        <div class="panel card notes">
+          <h3>Notes</h3>
+          <ul>
+            <li>Quartz and lumenite ore only appear in chunks generated after the mod was installed; in an existing world, explore new land.</li>
+            <li>Removing the mod later leaves its blocks (ores, benches) in the world as unknown blocks.</li>
+            <li><kbd>R</kbd> keeps its usual job while you hold a block (rotating it), while the rune in ability slot 3 fits your weapon (casting it), and in game modes or with plugins that use <kbd>R</kbd> themselves.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="changelog" aria-labelledby="changelog-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="gem" id="changelog-title">Changelog</h2>
+        </div>
+        <article class="changelog">
+          <h3>0.1.0 <time datetime="2026-10-18">2026-10-18</time></h3>
+          <p>First release.</p>
+          <ul>
+            <li>Zoom Goggles I–IV (1.5x to 8x): hold R to zoom with Hytale's own client zoom, the held item hides, the mouse slows down and the camera glides.</li>
+            <li>Night Vision Goggles I–IV (levels 1 to 5): the world lights up for the wearer alone; <code>/nightvision</code> switches it on and off.</li>
+            <li>UltraGoggles: zoom up to 16x (starting at 12x) and night vision 6.</li>
+            <li>Helms with goggles mounted, at the armor bench: Scout, Nightwatch and Overseer helms on the vanilla copper, iron, thorium, cobalt and adamantite helmets.</li>
+            <li>Optician's Bench with five tiers, each with its own look; it gives off light from tier 3 and its grindstone turns while crafting.</li>
+            <li>Quartz ore, glass and four lenses; lumenite, a rare ore only Night Vision Goggles IV and the UltraGoggles reveal.</li>
+            <li><code>/goggles</code> settings page: zoom strength and night vision brightness up to what the goggles allow, camera glide, night vision on or off.</li>
+            <li><code>config.json</code>: <code>requireGoggles</code> (or zoom and night vision for everyone), and per goggles limits that can only lower their strength.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <ul>
+        <li><a class="gh" href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Source</a></li>
+        <li><a href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/issues">Issues</a></li>
+        <li><a href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/blob/main/LICENSE">MIT License</a></li>
+        <li><a href="mailto:contact@hymods.de">contact@hymods.de</a></li>
+        <li><a href="/">Hymods</a></li>
+      </ul>
+      <small>Not affiliated with Hypixel Studios.</small>
+    </div>
+  </footer>
+</body>
+</html>
