@@ -28,7 +28,7 @@
   <header class="topbar">
     <div class="wrap">
       <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>HYMODS</a>
-      <a class="btn btn-primary" href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/releases/latest">
+      <a class="btn btn-primary" href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/releases/download/v0.1.1/FlexiisGoggles-0.1.1.jar">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11 3h2v9.17l3.59-3.58L18 10l-6 6-6-6 1.41-1.41L11 12.17V3zM5 19h14v2H5z"/></svg>
         Download
       </a>
@@ -47,13 +47,13 @@
         </div>
         <p class="lede">Craftable goggles: hold <kbd>R</kbd> to zoom like OptiFine, night vision lights up caves for you alone.</p>
         <ul class="badges" aria-label="About this mod">
-          <li class="version">0.1.0</li>
+          <li class="version">0.1.1</li>
           <li>Hytale 0.7</li>
           <li>Server-side</li>
           <li>MIT</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/releases/latest">
+          <a class="btn btn-primary" href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/releases/download/v0.1.1/FlexiisGoggles-0.1.1.jar">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11 3h2v9.17l3.59-3.58L18 10l-6 6-6-6 1.41-1.41L11 12.17V3zM5 19h14v2H5z"/></svg>
             Download
           </a>
@@ -534,6 +534,7 @@
               <li>Zones 1–3</li>
               <li>Cave stone</li>
               <li>y 30–105</li>
+              <li>About 140 per chunk</li>
             </ul>
           </article>
           <article class="panel card">
@@ -566,7 +567,7 @@
             </ul>
           </article>
         </div>
-        <p class="sub ores-note">Both ores only appear in newly generated chunks.</p>
+        <p class="sub ores-note">Quartz also comes into chunks generated before the mod, once, the first time they load with it. Lumenite only appears in newly generated chunks.</p>
       </div>
     </section>
 
@@ -619,7 +620,7 @@
           <div class="panel card">
             <h3>Install</h3>
             <ol>
-              <li>Put <a href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/releases/latest"><code>FlexiisGoggles-0.1.0.jar</code></a> into the server's <code>mods/</code> folder.</li>
+              <li>Put <a href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/releases/download/v0.1.1/FlexiisGoggles-0.1.1.jar"><code>FlexiisGoggles-0.1.1.jar</code></a> into the server's <code>mods/</code> folder.</li>
               <li>Restart the server.</li>
             </ol>
           </div>
@@ -659,7 +660,7 @@
         <div class="panel card notes">
           <h3>Notes</h3>
           <ul>
-            <li>Quartz and lumenite ore only appear in chunks generated after the mod was installed; in an existing world, explore new land.</li>
+            <li>Quartz comes into an existing world too: a chunk generated before the mod gets its quartz the first time it loads with the mod, once. Lumenite only appears in chunks generated after the mod was installed.</li>
             <li>Removing the mod later leaves its blocks (ores, benches) in the world as unknown blocks.</li>
             <li><kbd>R</kbd> keeps its usual job while you hold a block (rotating it), while the rune in ability slot 3 fits your weapon (casting it), and in game modes or with plugins that use <kbd>R</kbd> themselves.</li>
           </ul>
@@ -672,6 +673,13 @@
         <div class="section-head">
           <h2 class="gem" id="changelog-title">Changelog</h2>
         </div>
+        <article class="changelog">
+          <h3>0.1.1 <time datetime="2026-10-18">2026-10-18</time></h3>
+          <ul>
+            <li>About twice as much quartz: new chunks get about 140 blocks of quartz ore instead of 60.</li>
+            <li>Existing worlds get quartz too: a chunk generated before the mod gets quartz veins in its stone the first time it loads with the mod, once.</li>
+          </ul>
+        </article>
         <article class="changelog">
           <h3>0.1.0 <time datetime="2026-10-18">2026-10-18</time></h3>
           <p>First release.</p>

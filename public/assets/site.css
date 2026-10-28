@@ -489,6 +489,7 @@ td.num, th.num { white-space: nowrap; }
 .kv dd { margin: 0; }
 
 .changelog { display: grid; gap: 12px; }
+.changelog + .changelog { margin-top: 30px; }
 .changelog h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
 .changelog time { color: var(--muted); font-weight: 600; font-size: .95rem; }
 .changelog ul { display: grid; gap: 8px; padding-left: 1.2em; color: #d3dae4; max-width: 46em; }
