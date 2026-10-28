@@ -37,9 +37,9 @@ import java.util.zip.ZipFile;
  * Nothing from it is copied into this repository; only the rendered pictures are.
  */
 public final class Showcase {
-    private static Path common;
-    private static ZipFile game;
-    private static Path out;
+    static Path common;
+    static ZipFile game;
+    static Path out;
 
     private static final String GOGGLES = "Items/FlexiisGoggles/";
     private static final String BLOCKS = "Blocks/FlexiisGoggles/";
@@ -538,6 +538,7 @@ public final class Showcase {
     static final class Scene {
         final List<Quad> quads = new ArrayList<>();
         private final List<BufferedImage> sheets = new ArrayList<>();
+        private final Map<BufferedImage, Integer> shared = new java.util.IdentityHashMap<>();
         private int height;
         private BufferedImage atlas;
 
@@ -563,15 +564,48 @@ public final class Showcase {
                     minV = Math.min(minV, uv[i][1]);
                     maxV = Math.max(maxV, uv[i][1]);
                 }
-                // a face samples only its own rectangle of its own texture
-                int tw = texture.getWidth() - 1, th = texture.getHeight() - 1;
-                int u0 = Math.clamp((int) Math.floor(minU + 1e-6), 0, tw);
-                int u1 = Math.clamp((int) Math.ceil(maxU - 1e-6) - 1, u0, tw);
-                int t0 = Math.clamp((int) Math.floor(minV + 1e-6) - v0, 0, th);
-                int t1 = Math.clamp((int) Math.ceil(maxV - 1e-6) - 1 - v0, t0, th);
-                quads.add(new Quad(p, uv, f.fullbright(), u0, v0 + t0, u1, v0 + t1));
+                quads.add(quad(p, uv, f.fullbright(), texture, v0, minU, minV, maxU, maxV));
             }
             return this;
+        }
+
+        /**
+         * Adds one face that already sits where it belongs, with its own texture ({@code uv} in that texture's pixels):
+         * corners top-left, top-right, bottom-right, bottom-left. Faces that share a texture share its sheet.
+         */
+        Scene face(double[][] corners, double[][] texels, BufferedImage texture, boolean glow) {
+            Integer at = shared.get(texture);
+            if (at == null) {
+                at = height;
+                shared.put(texture, at);
+                sheets.add(texture);
+                height += texture.getHeight();
+                atlas = null;
+            }
+            int v0 = at;
+            double[][] p = new double[4][];
+            double[][] uv = new double[4][];
+            double minU = Double.MAX_VALUE, minV = Double.MAX_VALUE, maxU = -Double.MAX_VALUE, maxV = -Double.MAX_VALUE;
+            for (int i = 0; i < 4; i++) {
+                p[i] = corners[i].clone();
+                uv[i] = new double[]{texels[i][0], texels[i][1] + v0};
+                minU = Math.min(minU, uv[i][0]);
+                maxU = Math.max(maxU, uv[i][0]);
+                minV = Math.min(minV, uv[i][1]);
+                maxV = Math.max(maxV, uv[i][1]);
+            }
+            quads.add(quad(p, uv, glow, texture, v0, minU, minV, maxU, maxV));
+            return this;
+        }
+
+        /** A face that samples only its own rectangle of its own texture, which starts at {@code v0} in the atlas. */
+        private static Quad quad(double[][] p, double[][] uv, boolean glow, BufferedImage texture, int v0, double minU, double minV, double maxU, double maxV) {
+            int tw = texture.getWidth() - 1, th = texture.getHeight() - 1;
+            int u0 = Math.clamp((int) Math.floor(minU + 1e-6), 0, tw);
+            int u1 = Math.clamp((int) Math.ceil(maxU - 1e-6) - 1, u0, tw);
+            int t0 = Math.clamp((int) Math.floor(minV + 1e-6) - v0, 0, th);
+            int t1 = Math.clamp((int) Math.ceil(maxV - 1e-6) - 1 - v0, t0, th);
+            return new Quad(p, uv, glow, u0, v0 + t0, u1, v0 + t1);
         }
 
         BufferedImage atlas() {

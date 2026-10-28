@@ -5,8 +5,11 @@ set -euo pipefail
 # web files: WebP plus a PNG fallback in public/flexiisgoggles/img/ (which it empties first, except
 # for logo.png), the link previews as JPEG, and the favicons from the logo.
 #
-#     tools/render.sh            # the mod as released (tag v0.1.0)
-#     tools/render.sh v0.2.0     # another tag or commit of the mod
+# Two states of the mod, each from its own ref: what is released (Showcase.java) and what 0.2.0
+# brings (MirrorShowcase.java: the mirror dimension, its creatures, the blight, the companion).
+#
+#     tools/render.sh                       # released from tag v0.1.0, 0.2.0 from branch adventure
+#     tools/render.sh v0.1.1 v0.2.0         # other tags or commits of the mod
 #
 # Needs Java 25, ImageMagick (magick), cwebp, the mod's repository and the game's Assets.zip:
 #
@@ -15,7 +18,8 @@ set -euo pipefail
 #
 # The mod is read with `git archive`, so its working tree (unfinished work) does not matter.
 
-ref="${1:-v0.1.0}"
+released="${1:-v0.1.0}"
+upcoming="${2:-adventure}"
 repo="$(cd "$(dirname "$0")/.." && pwd)"
 mod="${MOD_REPO:-$HOME/Server-Projects/Hytale/hytale-flexiisgoggles}"
 assets="${HYTALE_ASSETS:-$HOME/Library/Application Support/Hytale/install/release/package/game/latest/Assets.zip}"
@@ -34,12 +38,18 @@ done
 work="$(mktemp -d)"
 trap 'rm -rf "$work"' EXIT
 
-echo "=== mod $ref"
-git -C "$mod" archive "$ref" dev/art src/main/resources/Common | tar -x -C "$work"
+echo "=== mod $released (released)"
+mkdir -p "$work/released" "$work/upcoming"
+git -C "$mod" archive "$released" dev/art src/main/resources/Common | tar -x -C "$work/released"
+"${java_bin}javac" -d "$work/released-classes" "$work"/released/dev/art/*.java "$repo/tools/Showcase.java"
+"${java_bin}java" -Djava.awt.headless=true -cp "$work/released-classes" Showcase "$work/released" "$assets" "$work/out"
 
-echo "=== render"
-"${java_bin}javac" -d "$work/classes" "$work"/dev/art/*.java "$repo/tools/Showcase.java"
-"${java_bin}java" -cp "$work/classes" Showcase "$work" "$assets" "$work/out"
+echo "=== mod $upcoming (0.2.0)"
+git -C "$mod" archive "$upcoming" dev/art src/main/resources | tar -x -C "$work/upcoming"
+"${java_bin}javac" -d "$work/upcoming-classes" "$work"/upcoming/dev/art/*.java "$repo/tools/Showcase.java" "$repo/tools/MirrorShowcase.java"
+# the mod's tools find its files relative to the checkout, and the game through HYTALE_ASSETS
+(cd "$work/upcoming" && HYTALE_ASSETS="$assets" "${java_bin}java" -Djava.awt.headless=true -cp "$work/upcoming-classes" \
+    MirrorShowcase "$work/upcoming" "$assets" "$work/out")
 
 echo "=== convert"
 # img/ holds only rendered pictures (and the logo); screenshots go to shots/

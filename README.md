@@ -13,8 +13,9 @@ public/                       what the web server serves
   assets/                     site.css, back.js (back arrow for visitors from fherrmann.com),
                               apple-touch-icon.png, og.jpg (link preview of the start page)
   404.html  robots.txt  sitemap.xml  favicon.ico
-tools/Showcase.java           renders the pictures from the mod's own models
-tools/render.sh               runs it and converts the result (WebP + PNG fallback, favicons)
+tools/Showcase.java           renders the pictures from the mod's own models (as released)
+tools/MirrorShowcase.java     renders the pictures of what 0.2.0 brings, on top of Showcase
+tools/render.sh               runs both and converts the result (WebP + PNG fallback, favicons)
 deploy/                       server setup (once) and the update script
 ```
 
@@ -28,11 +29,14 @@ Links are root-relative (`/assets/…`), so serve `public/` as the root rather t
 
 ## Pictures
 
-Every picture is rendered from the mod's models and textures as released (default: tag `v0.1.0`),
-with the mod's own renderer (`dev/art` in its repository):
+Every picture is rendered from the mod's models and textures with the mod's own renderer (`dev/art` in
+its repository), each from its own ref of the mod: what is released by `Showcase.java` (default: tag
+`v0.1.0`; 0.1.1 changed no model), what 0.2.0 brings by `MirrorShowcase.java` (default: branch
+`adventure`). MirrorShowcase also poses the creatures with the mod's tools (`Bunker.Assets`,
+`Taken.figure`), so it needs a ref that has them.
 
 ```bash
-tools/render.sh            # or: tools/render.sh v0.2.0
+tools/render.sh                    # or: tools/render.sh v0.1.1 v0.2.0
 ```
 
 Needs Java 25, ImageMagick, `cwebp`, the mod repository (`MOD_REPO`, default

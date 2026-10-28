@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <title>FlexiisGoggles · Hymods</title>
-  <meta name="description" content="Craftable goggles for Hytale servers: hold R to zoom like OptiFine, night vision lights up caves for you alone.">
+  <meta name="description" content="Craftable goggles for Hytale servers: hold R to zoom like OptiFine, night vision lights up caves for you alone. Coming in 0.2.0: the Mirror Dimension.">
   <link rel="canonical" href="https://hymods.de/flexiisgoggles/">
   <meta name="theme-color" content="#10131a">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Hymods">
   <meta property="og:title" content="FlexiisGoggles">
-  <meta property="og:description" content="Craftable goggles: hold R to zoom like OptiFine, night vision lights up caves for you alone.">
+  <meta property="og:description" content="Craftable goggles: hold R to zoom like OptiFine, night vision lights up caves for you alone. Coming in 0.2.0: the Mirror Dimension.">
   <meta property="og:url" content="https://hymods.de/flexiisgoggles/">
   <meta property="og:image" content="https://hymods.de/flexiisgoggles/og.jpg">
   <meta property="og:image:width" content="1200">
@@ -51,6 +51,7 @@
           <li>Hytale 0.7</li>
           <li>Server-side</li>
           <li>MIT</li>
+          <li class="next">0.2.0: Mirror Dimension</li>
         </ul>
         <div class="actions">
           <a class="btn btn-primary" href="https://github.com/BetterHytaleMods/hytale-flexiisgoggles/releases/download/v0.1.1/FlexiisGoggles-0.1.1.jar">
@@ -81,6 +82,13 @@
         <li><a href="#crafting">Crafting</a></li>
         <li><a href="#helms">Helms</a></li>
         <li><a href="#ores">Quartz &amp; Lumenite</a></li>
+        <li><a href="#mirror">Mirror Dimension <span class="next">0.2.0</span></a></li>
+        <li><a href="#creatures">Creatures <span class="next">0.2.0</span></a></li>
+        <li><a href="#nests">Rift Nests <span class="next">0.2.0</span></a></li>
+        <li><a href="#crimsonite">Crimsonite <span class="next">0.2.0</span></a></li>
+        <li><a href="#laser">Laser Goggles <span class="next">0.2.0</span></a></li>
+        <li><a href="#blight">The Blight <span class="next">0.2.0</span></a></li>
+        <li><a href="#companion">Rift Companion <span class="next">0.2.0</span></a></li>
         <li><a href="#settings">Settings</a></li>
         <li><a href="#commands">Commands</a></li>
         <li><a href="#server">Server owners</a></li>
@@ -568,6 +576,331 @@
           </article>
         </div>
         <p class="sub ores-note">Quartz also comes into chunks generated before the mod, once, the first time they load with it. Lumenite only appears in newly generated chunks.</p>
+      </div>
+    </section>
+
+    <section class="section" id="mirror" aria-labelledby="mirror-title">
+      <div class="wrap feature">
+        <div class="prose">
+          <h2 class="gem crimson" id="mirror-title">Mirror Dimension <span class="next">Coming in 0.2.0</span></h2>
+          <p>Behind the world lies its mirror: the same land at the same coordinates, every block rotten, always midnight, twice as many creatures. The ways in are rift portals that only Night Vision Goggles IV and the UltraGoggles show, with night vision on – stand still in one for 15 seconds to cross. The ways back are elsewhere.</p>
+          <p class="sub">Die there and you wake in the overworld; what dropped stays where you died for an hour.</p>
+        </div>
+        <div class="media">
+          <div class="stage rift">
+            <div class="pair">
+              <figure>
+                <picture>
+                  <source type="image/webp" srcset="/flexiisgoggles/img/mirror-overworld.webp">
+                  <img src="/flexiisgoggles/img/mirror-overworld.png" width="780" height="957" loading="lazy" decoding="async" alt="A patch of grass, dirt and stone with an oak trunk, by day">
+                </picture>
+                <figcaption>Overworld</figcaption>
+              </figure>
+              <figure class="on">
+                <picture>
+                  <source type="image/webp" srcset="/flexiisgoggles/img/mirror-rotten.webp">
+                  <img src="/flexiisgoggles/img/mirror-rotten.png" width="780" height="957" loading="lazy" decoding="async" alt="The same patch in the mirror: rotten, dark and veined red">
+                </picture>
+                <figcaption>Mirror</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="creatures" aria-labelledby="creatures-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="gem crimson" id="creatures-title">Creatures <span class="next">Coming in 0.2.0</span></h2>
+        </div>
+        <ul class="gallery four rift">
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-rift-hound.webp"><img src="/flexiisgoggles/img/creature-rift-hound.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Rift Hound</span>
+            <span class="meta">Ashen hide over raw flesh, its crest smouldering</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-hollowed.webp"><img src="/flexiisgoggles/img/creature-hollowed.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">The Hollowed</span>
+            <span class="meta">Leaves twitching remains; three heaps crawl together into a Flesh Hulk</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-spore-wraith.webp"><img src="/flexiisgoggles/img/creature-spore-wraith.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Spore Wraith</span>
+            <span class="meta">Flies, spore sacs glowing on its back</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-vine-lurker.webp"><img src="/flexiisgoggles/img/creature-vine-lurker.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Vine Lurker</span>
+            <span class="meta">A tentacle of wet bark and bone thorns</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-rift-bat.webp"><img src="/flexiisgoggles/img/creature-rift-bat.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Rift Bat</span>
+            <span class="meta">Swarms in caves and woods, spits blood</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-bloomjaw.webp"><img src="/flexiisgoggles/img/creature-bloomjaw.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Bloomjaw</span>
+            <span class="meta">Arrows barely scratch it, daggers do little; big weapons and the laser hit fully</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-flesh-hulk.webp"><img src="/flexiisgoggles/img/creature-flesh-hulk.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Flesh Hulk</span>
+            <span class="meta">Big, slow, tough; its blows throw you back</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-rift-mite.webp"><img src="/flexiisgoggles/img/creature-rift-mite.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Rift Mite</span>
+            <span class="meta">Swarms out of brood sacs when you walk up upright; keeps away from anyone holding a torch</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-rift-eel.webp"><img src="/flexiisgoggles/img/creature-rift-eel.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Rift Eel</span>
+            <span class="meta">Drags swimmers down in deep water; strike it to tear free</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-rift-leech.webp"><img src="/flexiisgoggles/img/creature-rift-leech.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Rift Leech</span>
+            <span class="meta">Swarms in the shallows; up to five cling on, drawing blood</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-unseen.webp"><img src="/flexiisgoggles/img/creature-unseen.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">The Unseen</span>
+            <span class="meta">Shows only through night vision or thermal goggles; moves only while nobody who sees it looks</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/creature-hive-eye.webp"><img src="/flexiisgoggles/img/creature-hive-eye.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Hive Eye</span>
+            <span class="meta">Watches the tunnels and nests; stay in its sight too long and it screams for the others</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="nests" aria-labelledby="nests-title">
+      <div class="wrap feature flip">
+        <div class="prose">
+          <h2 class="gem crimson" id="nests-title">Rift Nests <span class="next">Coming in 0.2.0</span></h2>
+          <p>Mounds of flesh round a beating heart. While the heart lives, creatures crawl out of the nest; a pickaxe breaks it. From some nests, root tunnels run under the ground to a mouth 40 to 80 blocks away, a brood waiting in a chamber halfway.</p>
+          <p class="sub">Strike the hive's flesh anywhere and the creatures within 40 blocks come for you.</p>
+        </div>
+        <div class="media">
+          <figure class="stage rift">
+            <picture>
+              <source type="image/webp" srcset="/flexiisgoggles/img/nest.webp">
+              <img src="/flexiisgoggles/img/nest.png" width="960" height="794" loading="lazy" decoding="async" alt="A rift nest: a mound of red flesh with a glowing heart on top, pods, tendrils and a brood sac">
+            </picture>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="crimsonite" aria-labelledby="crimsonite-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="gem crimson" id="crimsonite-title">Crimsonite &amp; Rift Ichor <span class="next">Coming in 0.2.0</span></h2>
+        </div>
+        <div class="cols">
+          <article class="panel card">
+            <figure class="stage rift">
+              <picture>
+                <source type="image/webp" srcset="/flexiisgoggles/img/ore-crimsonite.webp">
+                <img src="/flexiisgoggles/img/ore-crimsonite.png" width="460" height="513" loading="lazy" decoding="async" alt="Crimsonite Ore: rotten stone with glowing red crystals growing out of it">
+              </picture>
+            </figure>
+            <h3>Crimsonite Ore</h3>
+            <p>The mirror's own ore, a red crystal in its rock. With night vision on, it glows.</p>
+            <ul class="facts">
+              <li>Mirror only</li>
+              <li>y 20–100</li>
+              <li>About 2 veins per chunk</li>
+            </ul>
+          </article>
+          <article class="panel card">
+            <h3>From the mirror</h3>
+            <ul class="drops">
+              <li><span class="slot q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-crimsonite.webp"><img src="/flexiisgoggles/img/item-crimsonite.png" width="192" height="183" loading="lazy" decoding="async" alt=""></picture></span><b class="t-rare">Crimsonite</b><span>Mined from its ore; half the time 1–2 from a Flesh Hulk</span></li>
+              <li><span class="slot q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-rift-ichor.webp"><img src="/flexiisgoggles/img/item-rift-ichor.png" width="192" height="153" loading="lazy" decoding="async" alt=""></picture></span><b class="t-rare">Rift Ichor</b><span>3–5 % from the mirror's creatures, 3–6 from a Flesh Hulk</span></li>
+              <li><span class="slot q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-bloomjaw-fang.webp"><img src="/flexiisgoggles/img/item-bloomjaw-fang.png" width="97" height="192" loading="lazy" decoding="async" alt=""></picture></span><b class="t-epic">Bloomjaw Fang</b><span>10 % from a Bloomjaw</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="laser" aria-labelledby="laser-title">
+      <div class="wrap">
+        <div class="feature">
+          <div class="prose">
+            <h2 class="gem crimson" id="laser-title">Laser Goggles <span class="next">Coming in 0.2.0</span></h2>
+            <p><kbd>R</kbd> fires two beams from just below the eyes. Every shot heats the goggles up, shown as a bar over the hotbar; at full heat they lock for 8 seconds. While you wear them, the world looks red.</p>
+            <ul class="facts">
+              <li>2 × 37 damage</li>
+              <li>2 × 48 to the head</li>
+              <li>Bench tier 6</li>
+            </ul>
+          </div>
+          <div class="media">
+            <figure class="stage rift">
+              <picture>
+                <source type="image/webp" srcset="/flexiisgoggles/img/worn-laser.webp 480w, /flexiisgoggles/img/worn-laser-960.webp 960w" sizes="(min-width: 900px) 440px, 90vw">
+                <img src="/flexiisgoggles/img/worn-laser-960.png" width="960" height="875" loading="lazy" decoding="async" alt="Laser Goggles worn on a head: two glowing red lenses and a crimsonite crystal on top">
+              </picture>
+            </figure>
+          </div>
+        </div>
+
+        <div class="cols three">
+          <article class="panel card">
+            <figure class="stage rift">
+              <picture>
+                <source type="image/webp" srcset="/flexiisgoggles/img/bench-tier6.webp">
+                <img src="/flexiisgoggles/img/bench-tier6.png" width="492" height="561" loading="lazy" decoding="async" alt="Optician's Bench at tier 6, with a crimsonite crystal on top">
+              </picture>
+            </figure>
+            <h3>Optician's Bench, tier 6</h3>
+            <dl class="kv">
+              <dt>Upgrade</dt>
+              <dd><ul class="ings"><li><span class="slot small q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-crimsonite.webp"><img src="/flexiisgoggles/img/item-crimsonite.png" width="192" height="183" loading="lazy" decoding="async" alt=""></picture></span><b>30</b> Crimsonite</li><li><span class="slot small q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-rift-ichor.webp"><img src="/flexiisgoggles/img/item-rift-ichor.png" width="192" height="153" loading="lazy" decoding="async" alt=""></picture></span><b>5</b> Rift Ichor</li><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-quartz.webp"><img src="/flexiisgoggles/img/item-quartz.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>80</b> Quartz</li></ul></dd>
+              <dt>Unlocks</dt>
+              <dd>Laser Goggles</dd>
+            </dl>
+          </article>
+          <article class="panel card">
+            <figure class="stage rift">
+              <picture>
+                <source type="image/webp" srcset="/flexiisgoggles/img/worn-thermal.webp">
+                <img src="/flexiisgoggles/img/worn-thermal.png" width="480" height="438" loading="lazy" decoding="async" alt="Thermal Goggles worn on a head: two amber lenses">
+              </picture>
+            </figure>
+            <h3>Thermal Goggles</h3>
+            <p>Living things glow through walls, under a cold tint.</p>
+            <ul class="facts">
+              <li>Bench tier 4</li>
+            </ul>
+          </article>
+          <article class="panel card">
+            <figure class="stage rift">
+              <picture>
+                <source type="image/webp" srcset="/flexiisgoggles/img/item-rift-compass.webp">
+                <img src="/flexiisgoggles/img/item-rift-compass.png" width="192" height="167" loading="lazy" decoding="async" alt="The Rift Compass: a brass compass with a red needle">
+              </picture>
+            </figure>
+            <h3>Rift Compass</h3>
+            <p>Carried, it marks the rift nests around you on the map and the compass bar; with Night Vision IV or the UltraGoggles, also the heart of a blight and its gates.</p>
+            <ul class="facts">
+              <li>Bench tier 2</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="table-wrap recipes">
+          <table class="stack">
+            <caption class="visually-hidden">Laser Goggles, Thermal Goggles and Rift Compass at the Optician's Bench</caption>
+            <thead>
+              <tr><th scope="col">Item</th><th scope="col" class="num">Tier</th><th scope="col">Ingredients</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-legendary"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-laser.webp"><img src="/flexiisgoggles/img/icon-goggles-laser.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-legendary">Laser Goggles</span></span></th>
+                <td class="num" data-label="Tier">6</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-bloomjaw-fang.webp"><img src="/flexiisgoggles/img/item-bloomjaw-fang.png" width="97" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>1</b> Bloomjaw Fang</li><li><span class="slot small q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-rift-ichor.webp"><img src="/flexiisgoggles/img/item-rift-ichor.png" width="192" height="153" loading="lazy" decoding="async" alt=""></picture></span><b>4</b> Rift Ichor</li><li><span class="slot small q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-crimsonite.webp"><img src="/flexiisgoggles/img/item-crimsonite.png" width="192" height="183" loading="lazy" decoding="async" alt=""></picture></span><b>10</b> Crimsonite</li><li><span class="slot small q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-void.webp"><img src="/flexiisgoggles/img/item-lens-void.png" width="192" height="174" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Void Lens</li><li class="plain"><b>5</b> Adamantite Ingot</li><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-quartz.webp"><img src="/flexiisgoggles/img/item-quartz.png" width="149" height="192" loading="lazy" decoding="async" alt=""></picture></span><b>30</b> Quartz</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/icon-goggles-thermal.webp"><img src="/flexiisgoggles/img/icon-goggles-thermal.png" width="128" height="128" loading="lazy" decoding="async" alt=""></picture></span><span class="t-epic">Thermal Goggles</span></span></th>
+                <td class="num" data-label="Tier">4</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-epic"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-lens-void.webp"><img src="/flexiisgoggles/img/item-lens-void.png" width="192" height="174" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Void Lens</li><li class="plain"><b>3</b> Adamantite Ingot</li><li><span class="slot small q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-crimsonite.webp"><img src="/flexiisgoggles/img/item-crimsonite.png" width="192" height="183" loading="lazy" decoding="async" alt=""></picture></span><b>4</b> Crimsonite</li><li class="plain"><b>2</b> Heavy Leather</li></ul></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="item"><span class="slot q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-rift-compass.webp"><img src="/flexiisgoggles/img/item-rift-compass.png" width="192" height="167" loading="lazy" decoding="async" alt=""></picture></span><span class="t-rare">Rift Compass</span></span></th>
+                <td class="num" data-label="Tier">2</td>
+                <td class="wide"><ul class="ings"><li><span class="slot small q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-crimsonite.webp"><img src="/flexiisgoggles/img/item-crimsonite.png" width="192" height="183" loading="lazy" decoding="async" alt=""></picture></span><b>3</b> Crimsonite</li><li><span class="slot small q-rare"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-rift-ichor.webp"><img src="/flexiisgoggles/img/item-rift-ichor.png" width="192" height="153" loading="lazy" decoding="async" alt=""></picture></span><b>2</b> Rift Ichor</li><li class="plain"><b>2</b> Copper Ingot</li><li><span class="slot small q-common"><picture><source type="image/webp" srcset="/flexiisgoggles/img/item-glass.webp"><img src="/flexiisgoggles/img/item-glass.png" width="192" height="146" loading="lazy" decoding="async" alt=""></picture></span><b>1</b> Glass</li></ul></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="blight" aria-labelledby="blight-title">
+      <div class="wrap">
+        <div class="feature flip">
+          <div class="prose">
+            <h2 class="gem crimson" id="blight-title">The Blight <span class="next">Coming in 0.2.0</span></h2>
+            <p>Five to six game days after 0.2.0 first runs in a world, existing worlds too, the mirror breaks out near a player. The blight spreads 24 blocks every game day and rots everything it covers, from the treetops to the bottom of the world, houses included; deep inside it is as dark as the mirror, and the mirror's creatures roam it.</p>
+            <p>At its heart a hidden gate leads to the Hollow Manor. A trail of glowing veins runs past the three rift nests whose hearts seal the stairs down; below waits the <strong>Hollow King</strong>.</p>
+            <ul class="facts">
+              <li>Three phases</li>
+              <li>3000 health</li>
+              <li>+1800 per extra player</li>
+            </ul>
+          </div>
+          <div class="media">
+            <figure class="stage rift">
+              <picture>
+                <source type="image/webp" srcset="/flexiisgoggles/img/hollow-king.webp">
+                <img src="/flexiisgoggles/img/hollow-king.png" width="1040" height="1040" loading="lazy" decoding="async" alt="The Hollow King: a tall figure of dark bark and flesh, red veins glowing, a crown of bone spikes spread round his head">
+              </picture>
+            </figure>
+          </div>
+        </div>
+
+        <ul class="gallery four rift">
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/root-heart.webp"><img src="/flexiisgoggles/img/root-heart.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Root Heart</span>
+            <span class="meta">Four bind the king; break them first</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/grandfather-clock.webp"><img src="/flexiisgoggles/img/grandfather-clock.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Grandfather Clock</span>
+            <span class="meta">Whoever it strikes for rises into the air at the fourth strike</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/music-box.webp"><img src="/flexiisgoggles/img/music-box.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Music Box</span>
+            <span class="meta">Wind it to break the clock's curse</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/hollow-heart.webp"><img src="/flexiisgoggles/img/hollow-heart.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-legendary">Hollow Heart</span>
+            <span class="meta">His drop; with 4 Rift Ichor and an empty bottle, the Purifying Elixir</span>
+          </li>
+        </ul>
+        <p class="sub">Drink the Purifying Elixir within 8 blocks of the blight's gate and everything it rotted returns exactly as it was. While a blight spreads, its king rises again three game days after he fell.</p>
+      </div>
+    </section>
+
+    <section class="section" id="companion" aria-labelledby="companion-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="gem crimson" id="companion-title">Rift Companion <span class="next">Coming in 0.2.0</span></h2>
+        </div>
+        <ol class="gallery four rift" aria-label="From egg to companion">
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/rift-egg.webp"><img src="/flexiisgoggles/img/rift-egg.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name t-rare">Rift Egg</span>
+            <span class="meta">Found in the nests' pods; hold it up for two seconds and it hatches</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/companion-riftling.webp"><img src="/flexiisgoggles/img/companion-riftling.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Riftling</span>
+            <span class="meta">Yours, follows you, keeps out of fights</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/companion-rift-pup.webp"><img src="/flexiisgoggles/img/companion-rift-pup.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Rift Pup</span>
+            <span class="meta">After 3 Frozen Honey Buns; fights at your side</span>
+          </li>
+          <li class="panel">
+            <picture><source type="image/webp" srcset="/flexiisgoggles/img/companion-rift-companion.webp"><img src="/flexiisgoggles/img/companion-rift-companion.png" width="400" height="400" loading="lazy" decoding="async" alt=""></picture>
+            <span class="name">Rift Companion</span>
+            <span class="meta">After 8; fights at your side, and you can ride it</span>
+          </li>
+        </ol>
+        <p class="sub">Crouch and use it to make it wait or follow. Where wild hounds burn crimson, yours glows amber. If it dies, it curls back into its egg.</p>
       </div>
     </section>
 
