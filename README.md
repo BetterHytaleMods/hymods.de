@@ -15,7 +15,8 @@ public/                       what the web server serves
   404.html  robots.txt  sitemap.xml  favicon.ico
 tools/Showcase.java           renders the pictures from the mod's own models (as released)
 tools/MirrorShowcase.java     renders the pictures of what 0.2.0 brings, on top of Showcase
-tools/render.sh               runs both and converts the result (WebP + PNG fallback, favicons)
+tools/AdventureShowcase.java  renders Wren Hollow, the story adventure of 0.2.0, on top of Showcase
+tools/render.sh               runs them and converts the result (WebP + PNG fallback, favicons)
 deploy/                       server setup (once) and the update script
 ```
 
@@ -33,7 +34,9 @@ Every picture is rendered from the mod's models and textures with the mod's own 
 its repository), each from its own ref of the mod: what is released by `Showcase.java` (default: tag
 `v0.1.0`; 0.1.1 changed no model), what 0.2.0 brings by `MirrorShowcase.java` (default: branch
 `adventure`). MirrorShowcase also poses the creatures with the mod's tools (`Bunker.Assets`,
-`Taken.figure`), so it needs a ref that has them.
+`Taken.figure`), so it needs a ref that has them. `AdventureShowcase.java` draws Wren Hollow from the
+same ref: the buildings from their prefabs as the mod's `PrefabPreview` resolves them, the people
+posed by `Taken.figure`.
 
 ```bash
 tools/render.sh                    # or: tools/render.sh v0.1.1 v0.2.0

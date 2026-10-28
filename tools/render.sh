@@ -6,7 +6,8 @@ set -euo pipefail
 # for logo.png), the link previews as JPEG, and the favicons from the logo.
 #
 # Two states of the mod, each from its own ref: what is released (Showcase.java) and what 0.2.0
-# brings (MirrorShowcase.java: the mirror dimension, its creatures, the blight, the companion).
+# brings (MirrorShowcase.java: the mirror dimension, its creatures, the blight, the companion;
+# AdventureShowcase.java: Wren Hollow, the story adventure, its buildings and people).
 #
 #     tools/render.sh                       # released from tag v0.1.0, 0.2.0 from branch adventure
 #     tools/render.sh v0.1.1 v0.2.0         # other tags or commits of the mod
@@ -46,10 +47,13 @@ git -C "$mod" archive "$released" dev/art src/main/resources/Common | tar -x -C 
 
 echo "=== mod $upcoming (0.2.0)"
 git -C "$mod" archive "$upcoming" dev/art src/main/resources | tar -x -C "$work/upcoming"
-"${java_bin}javac" -d "$work/upcoming-classes" "$work"/upcoming/dev/art/*.java "$repo/tools/Showcase.java" "$repo/tools/MirrorShowcase.java"
+"${java_bin}javac" -d "$work/upcoming-classes" "$work"/upcoming/dev/art/*.java "$repo/tools/Showcase.java" \
+    "$repo/tools/MirrorShowcase.java" "$repo/tools/AdventureShowcase.java"
 # the mod's tools find its files relative to the checkout, and the game through HYTALE_ASSETS
-(cd "$work/upcoming" && HYTALE_ASSETS="$assets" "${java_bin}java" -Djava.awt.headless=true -cp "$work/upcoming-classes" \
-    MirrorShowcase "$work/upcoming" "$assets" "$work/out")
+for showcase in MirrorShowcase AdventureShowcase; do
+    (cd "$work/upcoming" && HYTALE_ASSETS="$assets" "${java_bin}java" -Djava.awt.headless=true -cp "$work/upcoming-classes" \
+        "$showcase" "$work/upcoming" "$assets" "$work/out")
+done
 
 echo "=== convert"
 # img/ holds only rendered pictures (and the logo); screenshots go to shots/

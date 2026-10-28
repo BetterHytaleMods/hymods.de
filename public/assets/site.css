@@ -553,9 +553,18 @@ td.num, th.num { white-space: nowrap; }
 .card .facts { display: flex; padding-left: 0; }
 .feature .stage > picture { width: 100%; max-width: 440px; }
 .prose .facts { display: flex; gap: 8px; margin-top: 2px; }
-.feature + .gallery, .feature + .cols, .gallery + .sub, .cols.three + .table-wrap { margin-top: 26px; }
+.feature + .gallery, .feature + .cols, .gallery + .sub, .cols.three + .table-wrap,
+.feature + .steps, .steps + .cols, .cols + .cast { margin-top: 26px; }
 .gallery + .sub { max-width: 46em; }
 .card .stage.tall picture { max-width: 220px; }
+/* a lineup: one figure in each fifth of the picture, the names under them */
+.stage.cast { display: block; place-items: normal; }
+.stage.cast picture, .stage.cast img { width: 100%; }
+.stage.cast > figcaption { position: static; margin-top: 10px; }
+.stage.cast .names {
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+  list-style: none; text-align: center; text-wrap: balance; line-height: 1.35;
+}
 .steps ol { max-width: 52em; }
 .steps + .table-wrap { margin-top: 22px; }
 
