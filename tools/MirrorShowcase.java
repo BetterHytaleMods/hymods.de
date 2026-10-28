@@ -38,12 +38,11 @@ public final class MirrorShowcase {
 
     /**
      * The creatures' cards: file name, model asset, animation set (null: at rest), frame, and how far the view turns. The
-     * poses are the ones the mod's own photos of them use. The page's names are newer than some of the mod's ids: the
-     * Hollowed is {@code Flexii_Flayed}, the riftling {@code Flexii_Pollywog}.
+     * poses are the ones the mod's own photos of them use.
      */
     static final Object[][] CREATURES = {
             {"rift-hound", "Flexii_Rift_Hound", "Alerted", 21.0, -30.0},
-            {"hollowed", "Flexii_Flayed", "Alerted", 24.0, -25.0},
+            {"hollowed", "Flexii_Hollowed", "Alerted", 24.0, -25.0},
             {"spore-wraith", "Flexii_Spore_Wraith", "Alerted", 42.0, -25.0},
             {"vine-lurker", "Flexii_Vine_Lurker", "Spawn", 44.0, -25.0},
             {"rift-bat", "Flexii_Rift_Bat", "HurtFly", 21.0, -25.0},
@@ -217,7 +216,7 @@ public final class MirrorShowcase {
     /** The companion as it grows: its egg, the riftling, the rift pup, the rift companion, each on a card of its own. */
     static void companion() throws IOException {
         Showcase.write(fit(item(GOGGLES + "Rift_Egg"), 30, 15, 400, 400, 80, 1.0, 9), "rift-egg");
-        Showcase.write(fit(figure("Flexii_Pollywog", "Idle", 0, 0), -30, 14, 400, 400, 18, 1.15, 10), "companion-riftling");
+        Showcase.write(fit(figure("Flexii_Riftling", "Idle", 0, 0), -30, 14, 400, 400, 18, 1.15, 10), "companion-riftling");
         Showcase.write(fit(figure("Flexii_Rift_Pup", null, 0, 0), -30, 10, 400, 400, 18, 1.15, 10), "companion-rift-pup");
         Showcase.write(fit(figure("Flexii_Rift_Companion", null, 0, 0), -30, 10, 400, 400, 18, 1.15, 10), "companion-rift-companion");
     }
